@@ -1,0 +1,12 @@
+body{
+	background-image: url("minecraft_background.png");
+}
+span{
+	border-radius: 30px;
+	background-color: #fff9e5;
+	padding-top: 5px;
+	padding-right: 5px;
+	padding-bottom: 5px;
+	padding-left: 5px;
+	line-height: 2em;
+}
