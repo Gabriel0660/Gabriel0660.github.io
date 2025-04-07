@@ -1,12 +1,123 @@
-body{
-	background-image: url("minecraft_background.png");
+/* Import für Minecraft-Pixel-Font */
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+/* Reset & Basis */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
-span{
-	border-radius: 30px;
-	background-color: #fff9e5;
-	padding-top: 5px;
-	padding-right: 5px;
-	padding-bottom: 5px;
-	padding-left: 5px;
-	line-height: 2em;
+
+body {
+  font-family: "Press Start 2P", monospace;
+  font-size: 12px;
+  background: url("minecraft_background.png") center center fixed;
+  background-size: cover;
+  color: #f1f1f1;
+  line-height: 1.6;
+  padding: 2rem;
+}
+
+/* Lesbarkeitsboxen */
+main, header, footer {
+  background-color: rgba(0, 0, 0, 0.7);
+  border: 4px solid #333;
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 0 15px #000;
+}
+
+/* Header */
+header {
+  text-align: center;
+}
+
+h1 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: #fff;
+  text-shadow: 2px 2px #000;
+  line-height: 2rem;
+}
+
+.subtitle {
+  display: block;
+  font-size: 0.8rem;
+  color: #4fc3f7;
+  margin-top: 0.5rem;
+  text-shadow: 1px 1px #000;
+}
+
+/* Buttons im Minecraft-Stil */
+.btn {
+  display: inline-block;
+  margin: 0.5rem;
+  padding: 0.8rem 1.5rem;
+  background: #5c913b;
+  border: 4px solid #3e5a23;
+  color: white;
+  text-decoration: none;
+  border-radius: 0px;
+  font-family: "Press Start 2P", monospace;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 4px 4px 0 #2f4f1c;
+}
+
+.btn:hover {
+  background: #76b947;
+  box-shadow: 2px 2px 0 #2f4f1c;
+  transform: translate(2px, 2px);
+}
+
+/* Hauptinhalt */
+main {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.instructions,
+.credits {
+  margin-bottom: 2rem;
+}
+
+.instructions ol {
+  margin-left: 2rem;
+  margin-top: 1rem;
+}
+
+/* Links */
+a {
+  color: #4fc3f7;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Audio */
+.audio {
+  text-align: center;
+  margin: 2rem 0;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  font-size: 0.8rem;
+  color: #aaa;
+  border-top: 1px solid #444;
+  padding-top: 1rem;
+}
+
+/* Hervorgehobene Textspanne */
+span {
+  border-radius: 10px;
+  background-color: rgba(255, 249, 229, 0.8);
+  padding: 5px 10px;
+  line-height: 1.8em;
+  display: inline-block;
 }

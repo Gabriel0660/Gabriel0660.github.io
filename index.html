@@ -1,33 +1,72 @@
 <!DOCTYPE html>
-<html>
-	<head> 
-		<title>MPPP - Minecraft ModPack Psychose</title>
-		<link rel="stylesheet" href="styles.css">
-	</head>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MPPP - Minecraft ModPack Psychose</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <h1>
+      Minecraft ModPack Psychose
+      <span class="subtitle">MMPP</span>
+    </h1>
+    <nav>
+      <a href="https://github.com/Gabriel0660/Psychose-S2/releases/download/v0.5-alpha-pre-release/Psychose-Client-Base.zip" class="btn">ModPack Download</a>
+      <a href="https://discord.gg/6MEbwcsh5k" class="btn">Discord Server</a>
+    </nav>
+  </header>
 
-	<body>
-		<h1><span>Minecraft ModPack Psychose - MMPP</span></h1>
-		<h3><span>GitHub Download für den Psychose ModPack S2</span></h3>
+  <main>
+    <section class="instructions">
+      <h2>Installation</h2>
+      <ol>
+        <li>ModPack herunterladen (oben)</li>
+        <li>Im Minecraft Launcher importieren – <strong>Prism Launcher</strong> wird empfohlen</li>
+        <li>
+          Falls nötig: 
+          <a href="https://d-romero.com/blog/minecraft-how-to-install-modpacks-using-prism-launcher/" target="_blank">
+            Guide zum ModPack Import
+          </a> (ab Schritt 3)
+        </li>
+        <li>Empfohlen: 6–10 GB RAM (ich nutze 12 GB)</li>
+      </ol>
+      <p>Weitere Infos auf der <a href="https://github.com/Gabriel0660/Psychose-S2" target="_blank">GitHub Seite</a>.</p>
+    </section>
 
-		<span><a href ="https://github.com/Gabriel0660/Psychose-S2/releases/download/v0.5-alpha-pre-release/Psychose-Client-Base.zip">ModPack Download</a></span>
-		<span><a href ="https://discord.gg/6MEbwcsh5k">Discord Server</a></span>
-		<p><span>Ihr m&uuml;sst zu aller erst das ModPack runterladen</span></p>
-		<p><span>Dann innerhalb eures Minecraft Launchers importieren</span></p>
-		<p><span>Ich empfehle euch Prism Launcher</span></p>
-		<p><span>Falls ihr dabei hilfe braucht, <a href = "https://d-romero.com/blog/minecraft-how-to-install-modpacks-using-prism-launcher/">hier</a> ein Guide zum ModPack Import</span></p>
-		<p><span>Natürlich kein Gaia's Riddle runterladen, sondern erst ab Schritt 3</span></p>
-		<p><span>Ich empfehle euch aber auch 6-10 GB RAM, pers&ouml;nlich benutze ich aber 12GB RAM</span></p>
-		<p><span>Schaut euch auch die <a href="https://github.com/Gabriel0660/Psychose-S2">GitHub Seite</a> an!</span></p>
+    <section class="credits">
+      <h2>Credits</h2>
+      <p>Mod-Dev Credits sind in-game sichtbar (unter den Minecraft Devs)</p>
+      <p>Besonderer Dank an <strong>@thepythonist</strong> für die Custom Mod <em>"Social Credit System"</em></p>
+      <p>Und natürlich <strong>@tef.fe</strong></p>
+    </section>
 
-		<!--Ab hier die Unterseite der Website-->
-		<br>
-		<p><span>Credits an den Mod Devs sind in-game mit unter den Minecraft Devs zu finden</span></p>
-		<p><span>Vielen Dank an @thepythonist für seine Mühe mit der custom Mod "Social Credit Sytem"</span></p>
-		<br>
-		<p><span>@tef.fe</span></p>
-	</body>
-	<audio controls autoplay >
-	  <source src="C418_Moo_City.mp3" type="audio/mpeg">
-		Your browser does not support the audio element.
-	</audio> 
+    <section class="audio">
+      <audio controls autoplay muted>
+        <source src="C418_Moo_City.mp3" type="audio/mpeg" />
+        Dein Browser unterstützt das Audio-Element nicht.
+      </audio>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 MPPP Community</p>
+  </footer>
+
+  <!-- Hintergrundmusik, wird beim ersten Klick hörbar -->
+  <audio id="bg-audio" preload="auto" muted>
+    <source src="C418_Moo_City.mp3" type="audio/mpeg" />
+  </audio>
+
+  <script>
+    window.addEventListener('click', function playAudio() {
+      const audio = document.getElementById('bg-audio');
+      audio.muted = false;
+      audio.play();
+      window.removeEventListener('click', playAudio);
+    });
+  </script>
+</body>
 </html>
